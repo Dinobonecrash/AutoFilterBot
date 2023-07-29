@@ -12,27 +12,27 @@ def is_enabled(value, default):
 
 # Bot information
 SESSION = environ.get('SESSION', 'Auto_Filters_Bot')
-API_ID = int(environ.get('API_ID', ''))
-API_HASH = environ.get('API_HASH', '')
-BOT_TOKEN = environ.get('BOT_TOKEN', '')
+API_ID = int(environ.get('API_ID', '29467528'))
+API_HASH = environ.get('API_HASH', '0bda31de4693f3413d868ebdeb087940')
+BOT_TOKEN = environ.get('BOT_TOKEN', '5877952369:AAEqQ-UkfGUQKQS0YXvbFx78pzMMtn_k4CU')
 
 # Bot pics and stickers
 STICKERS = (environ.get('STICKERS', 'CAACAgIAAxkBAAEGm9hjhf69CtQmXoeQ2HidYCGBFeZ4gAACxgEAAhZCawpKI9T0ydt5RysE CAACAgIAAxkBAAEGm9pjhf7I9jCDh3PpkocMNFcPJfisvwAC0wADVp29CvUyj5fVEvk9KwQ CAACAgIAAxkBAAEGm9xjhf7SH4Yc8EP5yI4e8BTH968ClwACGAADDbbSGX671giQDJU8KwQ')).split()
 PICS = (environ.get('PICS', 'https://telegra.ph/file/58fef5cb458d5b29b0186.jpg https://telegra.ph/file/f0aa4f433132769f8970c.jpg https://telegra.ph/file/f515fbc2084592eca60a5.jpg https://telegra.ph/file/20dbdcffaa89bd3d09a74.jpg https://telegra.ph/file/6045ba953af4def846238.jpg')).split()
 
 # Bot Admins
-ADMINS = [int(admins) if id_pattern.search(admins) else admins for admins in environ.get('ADMINS', '').split()]
-auth_users = [int(auth_users) if id_pattern.search(auth_users) else auth_users for auth_users in environ.get('AUTH_USERS', '').split()]
+ADMINS = [int(admins) if id_pattern.search(admins) else admins for admins in environ.get('ADMINS', '5669981425').split()]
+auth_users = [int(auth_users) if id_pattern.search(auth_users) else auth_users for auth_users in environ.get('AUTH_USERS', '5669981425').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 
 # Channels
-INDEX_CHANNELS = [int(index_channels) if id_pattern.search(index_channels) else index_channels for index_channels in environ.get('INDEX_CHANNELS', '').split()]
+INDEX_CHANNELS = [int(index_channels) if id_pattern.search(index_channels) else index_channels for index_channels in environ.get('INDEX_CHANNELS', '-1001960724430').split()]
 auth_channel = environ.get('AUTH_CHANNEL', '')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', ''))
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001709865811'))
 
 # MongoDB information
-DATABASE_URL = environ.get('DATABASE_URL', "")
+DATABASE_URL = environ.get('DATABASE_URL', "mongodb+srv://botmusic343:botmusic343@cluster0.0dzp1in.mongodb.net/?retryWrites=true&w=majority")
 DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Files')
 
@@ -44,7 +44,7 @@ UPDATES_LINK = environ.get('UPDATES_LINK', 'https://t.me/SL_Bots_Updates')
 AUTO_FILTER = is_enabled((environ.get('AUTO_FILTER', "True")), True)
 IMDB = is_enabled((environ.get('IMDB', "True")), True)
 SPELL_CHECK = is_enabled(environ.get("SPELL_CHECK", "True"), True)
-SHORTLINK = is_enabled((environ.get('SHORTLINK', "True")), True)
+SHORTLINK = is_enabled((environ.get('SHORTLINK', "False")), True)
 AUTO_DELETE = is_enabled((environ.get('AUTO_DELETE', "False")), False)
 WELCOME = is_enabled((environ.get('WELCOME', "False")), False)
 PROTECT_CONTENT = is_enabled((environ.get('PROTECT_CONTENT', "False")), False)
